@@ -1,0 +1,13 @@
+html,body {
+    height: 100%;
+}
+#calculator-body {
+    display: flex;
+    gap: 5px;
+}
+.first-col, #number-grid, #operators-grid {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 5px;
+}

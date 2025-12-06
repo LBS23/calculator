@@ -36,6 +36,7 @@ const operators = document.querySelectorAll(".operator");
 const equals = document.querySelector("#equals");
 const point = document.querySelector("#point");
 const clearBtn = document.querySelector("#all-clear");
+const deleteBtn = document.querySelector("#last-number")
 let number1 = '';
 let operator = '';
 let operatorFlag = true;
@@ -91,5 +92,9 @@ equals.addEventListener('click',()=>{
         equalsFlag = false;
     };
 });
-
+function removeLast(){
+    let newString = display.textContent.slice(0,-1);
+    display.textContent = newString;
+}
 clearBtn.addEventListener('click', clear);
+deleteBtn.addEventListener('click', removeLast);

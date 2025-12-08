@@ -1,13 +1,24 @@
-html,body {
-    height: 100%;
+html {
     display: flex;
     justify-content: center;
+}
+body {
+    height: 100%;
+    width: 100%;
+    flex-grow: 1;
+    background-color: honeydew;
 }
 #calculator-body {
     display: flex;
     flex-direction: column;
-    gap: 5px;
-    align-self: center;
+    gap: 10px;
+    margin: auto;
+    height: 385px;
+    width: 264px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #000000;
 }
 .first-col, #number-grid, #operators-grid {
     display: flex;
@@ -15,21 +26,48 @@ html,body {
     flex-wrap: wrap;
     gap: 5px;
 }
-.second-col {
-    display: flex;
-    align-items: flex-end;
-}
 #calculator-display {
     border: 1px solid black;
     display: flex;
     justify-content: flex-end;
+    min-height: 60px;
+    font-size: 1.5rem;
+    font-weight: 200;
+    background-color: #000000;
+    color: #FFFFFF;
+    /* white-space: normal;
+    flex-wrap: wrap;
+    overflow-wrap: break-word; */
+    /* CAN'T GET IT TO WRAP THE NUMBERS!!! */
 }
 #calculator-buttons {
     display: flex;
     gap: 5px;
+    
 }
 .first-row {
     display: flex;
-    justify-content: flex-end;
     gap: 5px;
+}
+button {
+    min-width: 50px;
+    min-height: 50px;
+}
+
+button#all-clear, button#last-number {
+    flex-grow: 1;
+}
+#calculator-buttons {
+    flex-grow: 1;
+}
+.second-col {
+    flex-grow: 1;
+
+}
+button.operator {
+    font-size: 1.5rem;
+    background-color: #FFA500;
+}
+h1 {
+    text-align: center;
 }
